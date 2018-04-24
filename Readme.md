@@ -1,3 +1,3 @@
-# Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
+# Учебный проект «Код и Магия»
 
-* Имя, фамилия: [Khadis Asfyandiyarov].
+* Имя, фамилия: [Khadis Asfyandiyarov]
