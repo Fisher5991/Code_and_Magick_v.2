@@ -17,7 +17,7 @@
     if (evt.target.value.length < InputLimitation.MIN_LENGTH) {
       evt.target.setCustomValidity('Имя персонажа не может содержать менее ' + InputLimitation.MIN_LENGTH + ' символов')
     } else {
-      // evt.target.setCustomValidity('');
+      evt.target.setCustomValidity('');
     }
   }
 

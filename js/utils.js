@@ -1,20 +1,20 @@
 'use strict';
 
 (function () {
-  var currentKeyCode = {
+  var CurrentKeyCode = {
     'ENTER': 13,
     'ESC': 27
   }
 
   window.utils = {
     isEnterEvent: function (evt) {
-      if (evt.keyCode === currentKeyCode.ENTER) {
+      if (evt.keyCode === CurrentKeyCode.ENTER) {
         return true;
       }
     },
 
     isEscEvent: function (evt) {
-      if (evt.keyCode === currentKeyCode.ESC) {
+      if (evt.keyCode === CurrentKeyCode.ESC) {
         return true;
       }
     },
