@@ -75,22 +75,19 @@
     var resultEscPressAction = window.utils.isEscEvent(evt);
 
     if (resultEscPressAction && (evt.target !== setupUserName)) {
-      window.togglePopup.close(evt, setup);
-      document.removeEventListener('keydown', onPopupEscPress);
+      window.togglePopup.close(evt, setup, onPopupEscPress);
     }
   }
 
   var onSetupOpenClick = function (evt) {
-    window.togglePopup.open(evt, setup);
-    document.addEventListener('keydown', onPopupEscPress);
+    window.togglePopup.open(evt, setup, onPopupEscPress);
   }
 
   var onSetupOpenKeydown = function (evt) {
     var resultOpenAction = window.utils.isEnterEvent(evt);
 
     if (resultOpenAction) {
-      window.togglePopup.open(evt, setup);
-      document.addEventListener('keydown', onPopupEscPress);
+      window.togglePopup.open(evt, setup, onPopupEscPress);
     }
   }
 
@@ -98,15 +95,13 @@
     var resultCloseAction = window.utils.isEnterEvent(evt);
 
     if (resultCloseAction) {
-      window.togglePopup.close(evt, setup);
-      document.removeEventListener('keydown', onPopupEscPress);
+      window.togglePopup.close(evt, setup, onPopupEscPress);
     }
   }
 
   var onSetupCloseClick = function (evt) {
     evt.preventDefault();
-    window.togglePopup.close(evt, setup);
-    document.removeEventListener('keydown', onPopupEscPress);
+    window.togglePopup.close(evt, setup, onPopupEscPress);
   }
 
   setupOpen.tabIndex = '0';

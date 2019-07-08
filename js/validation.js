@@ -6,12 +6,8 @@
     'MAX_LENGTH': 25
   }
 
-  var setupWizardForm = setup.querySelector('.setup-wizard-form');
+  var setupWizardForm = document.querySelector('.setup-wizard-form');
   var setupUserName = setupWizardForm.querySelector('.setup-user-name');
-
-  var startValidation = function () {
-
-  }
 
   var onUserNameInput = function (evt) {
     if (evt.target.value.length < InputLimitation.MIN_LENGTH) {

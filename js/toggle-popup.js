@@ -2,12 +2,15 @@
 
 (function () {
   window.togglePopup = {
-    open: function (evt, popup) {
+    open: function (evt, popup, escHandler) {
       popup.classList.remove('hidden');
+      document.addEventListener('keydown', escHandler);
     },
 
-    close: function (evt, popup) {
+    close: function (evt, popup, escHandler) {
       popup.classList.add('hidden');
+      document.removeEventListener('keydown', escHandler);
+      popup.style = '';
     }
   }
 })();
