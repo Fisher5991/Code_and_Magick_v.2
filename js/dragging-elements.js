@@ -14,6 +14,7 @@
 
   var onArtifactsElementDragover = function (evt) {
     evt.preventDefault();
+    return false; // обязательно??!
   }
 
   var onArtifactsElementDrop = function (evt) {

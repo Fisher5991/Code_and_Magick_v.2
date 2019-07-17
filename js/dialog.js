@@ -23,9 +23,6 @@
 
     var offsetX;
     var offsetY;
-    console.log(pageHeight);
-    console.log(setupHeight);
-    console.log(coord.maxTop);
 
     currentViewportSize = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 

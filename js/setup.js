@@ -20,6 +20,12 @@
   var similarWizardTemplate = document.querySelector('#similar-wizard-template');
   var setupSimilar = document.querySelector('.setup-similar');
   var setupSimilarList = document.querySelector('.setup-similar-list');
+
+  var setupPlayer = document.querySelector('.setup-player');
+  var wizardCoat = setupPlayer.querySelector('.wizard-coat');
+  var wizardEyes = setupPlayer.querySelector('.wizard-eyes');
+  var wizardFireball = setupPlayer.querySelector('.setup-fireball');
+
   var similarItemFragment = document.createDocumentFragment();
   var wizardForm = {
     'ACTION': 'https://js.dump.academy/code-and-magick',
@@ -104,6 +110,18 @@
     window.togglePopup.close(evt, setup, onPopupEscPress);
   }
 
+  var onWizardCoatClick = function (evt) {
+    evt.target.style.fill = window.colorizeElement('coat');
+  }
+
+  var onWizardEyesClick = function (evt) {
+    evt.target.style.fill = window.colorizeElement('eyes');
+  }
+
+  var onWizardFireballClick = function (evt) {
+    evt.target.style.backgroundColor = window.colorizeElement('fireball');
+  }
+
   setupOpen.tabIndex = '0';
   setupClose.tabIndex = '0';
   setupOpen.addEventListener('click', onSetupOpenClick);
@@ -119,4 +137,8 @@
   setupWizardFormElement.action = wizardForm.ACTION;
   setupWizardFormElement.method = wizardForm.METHOD;
   setupWizardFormElement.enctype = wizardForm.ENCTYPE;
+
+  wizardCoat.addEventListener('click', onWizardCoatClick);
+  wizardEyes.addEventListener('click', onWizardEyesClick);
+  wizardFireball.addEventListener('click', onWizardFireballClick);
 })();
