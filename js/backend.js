@@ -31,7 +31,7 @@
   window.backend = {
     load: function (onSuccess, onError) {
       var xhr = setup(onSuccess, onError);
-      xhr.open('GET', URL + '/data' + '?callback=callbackName');
+      xhr.open('GET', URL + '/data');
       xhr.send();
     },
 
