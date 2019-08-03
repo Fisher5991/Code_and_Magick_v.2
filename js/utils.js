@@ -6,6 +6,8 @@
     'ESC': 27
   }
 
+  var lastTimeout;
+
   window.utils = {
     isEnterEvent: function (evt) {
       if (evt.keyCode === CurrentKeyCode.ENTER) {
@@ -36,6 +38,16 @@
 
     getScrollbarWidth: function () {
       return window.innerWidth - document.documentElement.clientWidth;
+    },
+
+    stopDebounce: function (cb, time, arg) {
+      if (lastTimeout) {
+        clearTimeout(lastTimeout);
+      }
+
+      lastTimeout = setTimeout(function () {
+        cb(arg);
+      }, time);
     }
   }
 })();
